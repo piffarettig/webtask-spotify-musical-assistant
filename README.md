@@ -60,3 +60,20 @@ Replace those values on the secrets.txt file.
 #### 5) Create the second webtask (http endpoint to retreive info)
 
 ```wt create assistant.js -n assistant --secrets-file secrets.txt```
+
+## Possible improvements
+
+#### 1) Parameterize spotify-auth.js
+
+In order to keep it simpler and not losing the focus of the sample, the way of getting the access tokens nowadays is not quite smart. You need to comment and uncomment the line to get the authorizationUrl depending on if you want to get the code or you want to get the access and refresh tokens. Some environment variables could simply solve this. 
+
+#### 2) Add a 'from' date parameter to the assistant webtask
+
+The webtask is not filtering the tracks using a certain date. In the future, it could be useful to add a date parameter as a query parameter, that could filter the tracks from that date on.
+
+The parameter could be easily accesed via the webtask context, with ```context.query.from```
+
+#### 3) Proactive notification: integrate with Sendgrid or another notification service
+
+The assistant webtask could also be croned to run at certain moment of the day (for example, at the end of my working day), so it sends me an emai via Sengrid of the song I listened most on that day. Then I can get home I practice it with the information read on my email. 
+
