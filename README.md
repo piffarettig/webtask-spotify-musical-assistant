@@ -36,6 +36,12 @@ A fourth file is very important in order for **musical-assistant.cron.js** and *
 
 This file contains all the secrets needed in order for the webtasks to work properly.
 
+## Try it
+
+You can try calling the endpoint with the following url (a simple HTTP GET will return you the result):
+
+https://wt-1ec3dadce3cec94a27b31f4b28f04d8c-0.sandbox.auth0-extend.com/assistant 
+
 ## Getting Started with the sample
 
 #### 1) Create an Spotify app [here](https://developer.spotify.com/dashboard/applications)
